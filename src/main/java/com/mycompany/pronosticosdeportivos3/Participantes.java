@@ -11,26 +11,30 @@ public class Participantes {
     
     private ArrayList<UnParticipante> participantes;
     private Rondas ronda;
-    private ArrayList<ArrayList<Object>> participantesYpuntajes; //auxiliar para acumular y ordenar informacion a imprimir
+    private ArrayList<ArrayList<Object>> participantesYpuntajes; //auxiliar para acumular y ordenar informacion a imprimir al fin del programa
     
-    public Participantes (String ruta, Rondas ronda) {
+    public Participantes (Rondas ronda) {
         participantes = new ArrayList(); //inicializa para poder recorrer con for, aun vacio.
-            //lee contenido del archivo de pronosticos. En Etapa 1 estaba en clase Pronosticos
-        this.leerPronosticos(ruta);
+            //lee contenido de la BD de pronosticos. En Etapa 2 leia archivo de pronosticos
+        this.leerPronosticos();
         
         this.ronda = ronda;
         //participantesYpuntajes se inicializa cada vez que se usa su metodo asociado
     }
         
-        
+    
         //Se supone que el orden de los distintos campos (columnas) en cada resultado de partidos y de pronósticos es fijo y no variará nunca y que la primera fila son titulos.
-    public void leerPronosticos(String ruta){
+    public void leerPronosticos(){
         
-        LectorArchivos lectorArchivos = new LectorArchivos();
+        //LectorArchivos lectorArchivos = new LectorArchivos();
         
-        ArrayList<String[]> renglonesParseados;
+        //String nombreDeTabla =  "pronostico_separador_coma";
+        ArrayList<String[]> filasParseadas;
         //lee todos los pronosticos de todos los participantes
-        renglonesParseados = lectorArchivos.leerArchivo(ruta);
+        //filasParseadas = lectorArchivos.leerArchivo(ruta);
+        //filasParseadas = LectorBD.leerTabla(nombreDeTabla);
+        //System.out.println(Configuracion.configuracion.get("nombre de tabla"));
+        filasParseadas = LectorBD.leerTabla(Configuracion.configuracion.get("nombre de tabla"));
 
         String idParticipante;
         String nombreParticipante;
@@ -40,7 +44,7 @@ public class Participantes {
         //crea objetos en base a los datos leidos
         //Los partidos son creados antes, cuando se leyeron los resultados de partidos jugados
         
-        for (String[] i : renglonesParseados){
+        for (String[] i : filasParseadas){
             
             //Con los datos leidos de un participante en un renglon, lo obtiene o lo crea si no existe.
             idParticipante = i[0];
@@ -103,7 +107,7 @@ public class Participantes {
         }
     } 
     
-    
+    //--------------------------------------------------------------------------
     /**
      * @return the participantes
      */

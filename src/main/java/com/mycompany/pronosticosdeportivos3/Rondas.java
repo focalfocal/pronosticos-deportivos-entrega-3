@@ -9,7 +9,7 @@ import java.util.Optional; //contenedor de objetos que pueden existir o no, para
  */
 public class Rondas {
     
-    private static final int NRO_CAMPOS = 12; //cantidad de campos en archivo de resultados
+    private static final int NRO_CAMPOS = Integer.parseInt(Configuracion.configuracion.get("numero de campos en archivo de resultados")); //cantidad de campos en archivo de resultados
     
     //El atributo partidos incluye los partidos jugados de todas las rondas (cada partido incluye el id  y numero de ronda). Ver suposición registrada en PronostiosDeportivos2.java
     private ArrayList<PartidoJugado> partidos;
@@ -34,10 +34,10 @@ public class Rondas {
     //Se supone que el orden de las distintas columnas (campos) en cada resultado de partidos y de pronósticos es fijo y no variará nunca y que la primera fila son titulos.
     public void leerRondas(String ruta){
         
-        LectorArchivos lectorArchivos = new LectorArchivos();
+        //LectorArchivos lectorArchivos = new LectorArchivos(); 
         
         ArrayList<String[]> renglonesParseados;
-        renglonesParseados = lectorArchivos.leerArchivo(ruta);
+        renglonesParseados = LectorArchivos.leerArchivo(ruta);
         
         Equipo equipo1;
         Equipo equipo2;

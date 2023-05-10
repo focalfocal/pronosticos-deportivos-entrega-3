@@ -56,9 +56,10 @@ public class PartidoJugado {
     public int[] evalPronUnPartido (UnPronostico unPronostico){
 
         int[] puntosEtc = new int[2];
+        int puntosPorAcierto = Integer.parseInt(Configuracion.configuracion.get("puntos al acertar un resultado")); //deberia estar estatico en algun lugar
         
         //puntaje
-        puntosEtc[0] = (this.getResultadoEquipo1() == unPronostico.getPronosticoEquipo1()) ? 1 : 0;
+        puntosEtc[0] = (this.getResultadoEquipo1() == unPronostico.getPronosticoEquipo1()) ? puntosPorAcierto : 0;
         //cantidad de aciertos
         puntosEtc[1] = (this.getResultadoEquipo1() == unPronostico.getPronosticoEquipo1()) ? 1 : 0;
         return puntosEtc;

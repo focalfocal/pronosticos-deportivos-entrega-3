@@ -78,6 +78,8 @@ public class UnParticipante {
         System.out.println(this.nombre + ": \t" + this.puntaje + "\t"  + this.acertados);
     }
     
+    
+    //-----------------------------------------------------------------------------------
     /**
      * @return the id
      */
