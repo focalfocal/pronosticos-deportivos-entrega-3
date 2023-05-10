@@ -1,0 +1,33 @@
+Participante - id,Participante - nombre,Fase - id,Fase - nombre,Ronda - id,Ronda - nro,Equipo 1 - id,Gana 1,Empata,Gana 2,Equipo 2 - id
+1,X acierta todos en cada ronda menos uno (hay 2 rondas),1,Inicial,1,1,1,X,,,2
+1,X acierta todos en cada ronda menos uno (hay 2 rondas),1,Inicial,1,1,3,,X,,4
+1,X acierta todos en cada ronda menos uno (hay 2 rondas),1,Inicial,1,1,1,X,,,4
+1,X acierta todos en cada ronda menos uno (hay 2 rondas),1,Inicial,1,1,2,,,X,3
+1,X acierta todos en cada ronda menos uno (hay 2 rondas),1,Inicial,2,2,1,,,X,5
+1,X acierta todos en cada ronda menos uno (hay 2 rondas),1,Inicial,2,2,6,,X,,7
+1,X acierta todos en cada ronda menos uno (hay 2 rondas),1,Inicial,2,2,1,X,,,7
+1,X acierta todos en cada ronda menos uno (hay 2 rondas),1,Inicial,2,2,5,X,,,6
+2,X acierta todos en cada ronda (hay 2 rondas),1,Inicial,1,1,1,,,X,2
+2,X acierta todos en cada ronda (hay 2 rondas),1,Inicial,1,1,3,,X,,4
+2,X acierta todos en cada ronda (hay 2 rondas),1,Inicial,1,1,1,X,,,4
+2,X acierta todos en cada ronda (hay 2 rondas),1,Inicial,1,1,2,,,X,3
+2,X acierta todos en cada ronda (hay 2 rondas),1,Inicial,2,2,1,X,,,5
+2,X acierta todos en cada ronda (hay 2 rondas),1,Inicial,2,2,6,,X,,7
+2,X acierta todos en cada ronda (hay 2 rondas),1,Inicial,2,2,1,X,,,7
+2,X acierta todos en cada ronda (hay 2 rondas),1,Inicial,2,2,5,X,,,6
+3,Y acierta todos en una FASE menos uno,1,Inicial,1,1,1,X,,,2
+3,Y acierta todos en una FASE menos uno,1,Inicial,1,1,3,,X,,4
+3,Y acierta todos en una FASE menos uno,1,Inicial,1,1,1,X,,,4
+3,Y acierta todos en una FASE menos uno,1,Inicial,1,1,2,,,X,3
+3,Y acierta todos en una FASE menos uno,1,Inicial,2,2,1,X,,,5
+3,Y acierta todos en una FASE menos uno,1,Inicial,2,2,6,,X,,7
+3,Y acierta todos en una FASE menos uno,1,Inicial,2,2,1,X,,,7
+3,Y acierta todos en una FASE menos uno,1,Inicial,2,2,5,X,,,6
+4,Y acierta todos en una FASE,1,Inicial,1,1,1,,,X,2
+4,Y acierta todos en una FASE,1,Inicial,1,1,3,,X,,4
+4,Y acierta todos en una FASE,1,Inicial,1,1,1,X,,,4
+4,Y acierta todos en una FASE,1,Inicial,1,1,2,,,X,3
+4,Y acierta todos en una FASE,1,Inicial,2,2,1,X,,,5
+4,Y acierta todos en una FASE,1,Inicial,2,2,6,,X,,7
+4,Y acierta todos en una FASE,1,Inicial,2,2,1,X,,,7
+4,X acierta todos en una FASE,1,Inicial,2,2,5,X,,,6

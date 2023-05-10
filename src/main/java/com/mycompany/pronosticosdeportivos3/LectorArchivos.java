@@ -17,7 +17,7 @@ public class LectorArchivos {
 
     //Supone que todos los renglones de un archivo (luego del primero), hasta el final del archivo, son útiles.
     //Omite primer renglon
-    public ArrayList<String[]> leerArchivo(String ruta){
+    public ArrayList<String[]> leerArchivo(String ruta){ //leerTablaBD
         
         ArrayList<String[]> renglonesParseados = new ArrayList();
         
@@ -58,6 +58,7 @@ public class LectorArchivos {
                               + "\nEl programa se cancela." );
             System.exit(9);
           }
+        
         return renglonesParseados;
         
     } //end leerArchivo   
