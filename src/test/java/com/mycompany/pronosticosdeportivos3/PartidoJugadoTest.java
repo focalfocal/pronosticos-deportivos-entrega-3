@@ -25,8 +25,6 @@ public class PartidoJugadoTest {
     public void testPartidoGanadoOperdido() {
 
             // nuestro escenario
-//            this.partidoJugado.setGolesEquipo1(3);
-//            this.partidoJugado.setGolesEquipo2(0);
               this.partidoJugado = new PartidoJugado("1","Inicial","1", "1", "1", "2", 
                       3, 0);  //Los resultados se calculan en el constructor.
 

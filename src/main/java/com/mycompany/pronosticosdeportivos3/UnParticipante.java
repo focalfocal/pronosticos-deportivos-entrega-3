@@ -50,7 +50,7 @@ public class UnParticipante {
             
             this.puntaje += puntosEtc[0];
             this.acertados += puntosEtc[1];
-            
+                        
             //Incrementa contadores
             if (puntosEtc[1] == 1){
                 //si hubo un acierto:
@@ -67,16 +67,12 @@ public class UnParticipante {
             if (aciertosEnRonda == PARTIDOS_POR_RONDA){
                 this.puntaje += PTOS_EXTRA_POR_RONDA_ACERTADA;
                 //el final de ronda es detectado mas abajo y se inicializan contadores
-                //aciertosEnRonda = 0;
-                //noAciertosEnRonda = 0;
             }
             
             //si acertó todos los partidos en una fase, asigna puntos
             if (aciertosEnFase == PARTIDOS_POR_FASE){
                 this.puntaje += PTOS_EXTRA_POR_FASE_ACERTADA;
                 //el final de ronda es detectado mas abajo y se inicializan contadores
-                //aciertosEnRonda = 0;
-                //noAciertosEnRonda = 0;
             }
             
             //si terminó la ronda
@@ -91,8 +87,6 @@ public class UnParticipante {
                 noAciertosEnFase = 0;
             }
             
-            //si es acertado, sumar acierto a ronda y a fase. Si cambia de ronda o fase, si es cantidad de aciertos igual a partidos por ronda o partidos por fase asignar puntos extra a this.puntaje y resetear contador partidos en ronda o fasse, 
-            //acumulara partido ganado, luego recorrer viendo rondas, luego viendo fases
         }
     }
 
@@ -104,9 +98,6 @@ public class UnParticipante {
         String idCombinadaEquiposPronost = unPronostico.getIdCombinadaRondaEquipos();
         
         for (PartidoJugado partido : rondas.getPartidos() ){
-            //System.out.println("partido.getIdCombinadaEquipos() = " + partido.getIdCombinadaEquipos());
-            //System.out.println("idCombinadaEquiposPronost = " + idCombinadaEquiposPronost);
-            //System.out.println(".................................................");
  
             if ( partido.getIdCombinadaEquipos().equals( idCombinadaEquiposPronost)) {
                 return partido;

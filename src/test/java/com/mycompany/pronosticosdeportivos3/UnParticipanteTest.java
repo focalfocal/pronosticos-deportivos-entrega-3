@@ -45,11 +45,8 @@ public class UnParticipanteTest {
         this.rondas.setPartidos(partidos); 
         
         //.............................................................
-        this.unParticipante = new UnParticipante ( "8", "Daniel");
-        
-//        UnPronostico pronostico = new UnPronostico ("2", "3", "4", "X", "", "");
-//        unParticipante.agregarPronostico (pronostico);
-        
+        this.unParticipante = new UnParticipante ( "8", "Dario");
+      
         
     }
 

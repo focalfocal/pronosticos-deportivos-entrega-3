@@ -3,7 +3,6 @@ package com.mycompany.pronosticosdeportivos3;
 import java.io.File;  // operaciones con archivos. Version mas moderna java.nio
 //java.io.readLine() visto en teoría con Carlos está deprecado en Java 11
 import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.Scanner; // lectura de archivos de texto
 import java.util.ArrayList;
 
@@ -13,43 +12,36 @@ import java.util.ArrayList;
  */
 public class LectorArchivos {
 
-    //Supone que todos los renglones de un archivo (luego del primero), hasta el final del archivo, son útiles.
-    //IMPORTANTE: Omite primer renglon
+    //Supone que todas las filas de un archivo (luego del primero), hasta el final del archivo, son útiles.
+    //IMPORTANTE: Omite primera fila
     public static ArrayList<String[]> leerArchivo(String ruta){ //leerTablaBD
         
-        ArrayList<String[]> renglonesParseados = new ArrayList();
+        ArrayList<String[]> filasParseados = new ArrayList();
         Scanner miLector = null;
         
         try {
-            //  Al instanciar o crear el objeto, abrimos el archivo.
-            //File objetoMiArchivo = new File( ruta );
+            //  Al instanciar o crear el objeto, abre el archivo.
             File objetoMiArchivo = new File( ruta );
             miLector = new Scanner(objetoMiArchivo);
 
-            String renglon;
-            int nroRenglon = 0;
+            String fila;
+            int nroFila = 0;
             
             while (miLector.hasNextLine()) {
-                renglon = miLector.nextLine();
-                //System.out.println(renglon);
-                //omite renglon inicial de titulos
-                if (nroRenglon > 0){
-                    //parsea los campos de un renglon y los guarda
-                    renglonesParseados.add(renglon.split(";"));
-                    //System.out.println(renglon.split(";"));
-//                    String[] abc = renglon.split(";");
-//                    for (int i = 0; i<abc.length; i++){
-//                        System.out.print(abc[i] + "\t");
-//                        System.out.println();
-                    //}
+                fila = miLector.nextLine();
+
+                if (nroFila > 0){
+                    //parsea los campos de una fila y los guarda
+                    filasParseados.add(fila.split(";"));
+
                 }
-                nroRenglon++;
+                nroFila++;
             }
 
             //  Cerramos el archivo.
             miLector.close();
             
-            return renglonesParseados;
+            return filasParseados;
             
           } //end try
 
@@ -78,7 +70,7 @@ public class LectorArchivos {
                 }
         }
         
-        return renglonesParseados;
+        return filasParseados;
         
     } //end leerArchivo   
 }

@@ -69,6 +69,7 @@ public class PartidoJugado {
         return puntosEtc;
     }
 
+    //falta agregar fase
     @Override
     public String toString() {
         return "PartidoJugado{" + "idCombinadaEquipos=" + idCombinadaEquipos + ", idRonda=" + idRonda + ", numRonda=" + numRonda + ", id equipo1=" + idEquipo1 + ", id equipo2=" + idEquipo2 + ", golesEquipo1=" + golesEquipo1 + ", golesEquipo2=" + golesEquipo2 + ", resultadoEquipo1=" + resultadoEquipo1 + ", resultadoEquipo2=" + resultadoEquipo2 + '}'; //pendiente agregar fase

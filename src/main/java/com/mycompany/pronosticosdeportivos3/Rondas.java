@@ -65,7 +65,6 @@ public class Rondas {
                 crearEquipoSiNoExiste(i[9], i[10], i[11]); //equipo2
 
                 //En etapa 1 un partido contenía los equipos. Ahora solo tiene el id del equipo.
-                //PartidoJugado partidoJugado = new PartidoJugado(i[2], i[3], i[4], i[9], golesEquipo1, golesEquipo2);
                 PartidoJugado partidoJugado = new PartidoJugado(i[0], i[1], i[2], i[3], i[4], i[9], golesEquipo1, golesEquipo2);
 
                 this.partidos.add(partidoJugado);

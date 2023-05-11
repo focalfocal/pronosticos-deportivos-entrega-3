@@ -15,7 +15,7 @@ public class Participantes {
     
     public Participantes (Rondas ronda) {
         participantes = new ArrayList(); //inicializa para poder recorrer con for, aun vacio.
-            //lee contenido de la BD de pronosticos. En Etapa 2 leia archivo de pronosticos
+        //lee contenido de la BD de pronosticos. En Etapa 2 leia archivo de pronosticos
         this.leerPronosticos();
         
         this.ronda = ronda;
@@ -26,14 +26,9 @@ public class Participantes {
         //Se supone que el orden de los distintos campos (columnas) en cada resultado de partidos y de pronósticos es fijo y no variará nunca y que la primera fila son titulos.
     public void leerPronosticos(){
         
-        //LectorArchivos lectorArchivos = new LectorArchivos();
-        
-        //String nombreDeTabla =  "pronostico_separador_coma";
         ArrayList<String[]> filasParseadas;
+        
         //lee todos los pronosticos de todos los participantes
-        //filasParseadas = lectorArchivos.leerArchivo(ruta);
-        //filasParseadas = LectorBD.leerTabla(nombreDeTabla);
-        //System.out.println(Configuracion.configuracion.get("nombre de tabla"));
         filasParseadas = LectorBD.leerTabla(Configuracion.configuracion.get("nombre de tabla"));
 
         String idParticipante;

@@ -13,13 +13,10 @@ public class LectorBD {
         ArrayList<String[]> filas = new ArrayList<>();
         
         try{
-//            String direccionBD = "jdbc:mysql://localhost:3306/pronosticos_pron_deportivos";
-//            String username = "root";
-//            String password = "1234"; //default de Xampp Mysql
+
             String direccionBD = Configuracion.configuracion.get("direccionBD");
             String username = Configuracion.configuracion.get("username");
             String password = Configuracion.configuracion.get("password");
-            //String nombreDeTabla =  "pronostico_separador_coma";
 
             Connection connection = DriverManager.getConnection(direccionBD, username, password);
 
