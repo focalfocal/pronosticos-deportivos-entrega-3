@@ -27,7 +27,7 @@ public class PartidoJugadoTest {
             // nuestro escenario
 //            this.partidoJugado.setGolesEquipo1(3);
 //            this.partidoJugado.setGolesEquipo2(0);
-              this.partidoJugado = new PartidoJugado("1", "1", "1", "2", 
+              this.partidoJugado = new PartidoJugado("1","Inicial","1", "1", "1", "2", 
                       3, 0);  //Los resultados se calculan en el constructor.
 
             // Procesar
@@ -44,7 +44,7 @@ public class PartidoJugadoTest {
     public void testPartidoPerdidoOganado() {
 
             // nuestro escenario
-              this.partidoJugado = new PartidoJugado("1", "1", "1", "2", 
+              this.partidoJugado = new PartidoJugado("1","Inicial","1", "1", "1", "2", 
                       3, 5);  //Los resultados se calculan en el constructor.
 
             // Procesar
@@ -62,7 +62,7 @@ public class PartidoJugadoTest {
 
             // nuestro escenario
 
-              this.partidoJugado = new PartidoJugado("1", "1", "1", "2", 
+              this.partidoJugado = new PartidoJugado("1","Inicial","1", "1", "1", "2", 
                       3, 3);  //Los resultados se calculan en el constructor.
 
             // Procesar

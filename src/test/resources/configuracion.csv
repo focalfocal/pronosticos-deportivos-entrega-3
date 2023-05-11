@@ -1,0 +1,9 @@
+Archivo de configuraciones en formato clave-valor, separados por ";"
+direccionBD;jdbc:mysql://localhost:3306/pronosticos_pron_deportivos
+password;1234
+username;root
+nombre de tabla;pronostico_separador_coma
+numero de campos en archivo de resultados;12
+puntos al acertar un resultado;1
+puntos extra por ronda acertada;10
+puntos extra por fase acertada;100

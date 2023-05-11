@@ -9,6 +9,8 @@ import com.mycompany.pronosticosdeportivos3.PronosticosDeportivos3.ResultadoEnum
 public class PartidoJugado {
 
     private String idCombinadaEquipos; //Para identificar los partidos de forma unívoca para su correcto procesamiento, y matchearlos con los pronósticos
+    private String idFase; // agregado campo para Entrega 3
+    private String nombreFase; // agregado campo para Entrega 3
     private String idRonda; // agregado campo para Entrega 2
     private String numRonda; // agregado campo para Entrega 2
     private String idEquipo1;
@@ -20,8 +22,10 @@ public class PartidoJugado {
 
     PartidoJugado(){} //usado para cumplir facilmente una necesidad de sintaxis obligatoria en otra parte del código. Sin otro uso.
     
-    PartidoJugado(String idRonda, String numRonda, String idEquipo1, String idEquipo2, int golesEquipo1, int golesEquipo2){
-        this.idCombinadaEquipos = idRonda + "+" + idEquipo1 + "+" + idEquipo2;
+    PartidoJugado(String idFase, String nombreFase, String idRonda, String numRonda, String idEquipo1, String idEquipo2, int golesEquipo1, int golesEquipo2){
+        this.idCombinadaEquipos = idFase + "+" + idRonda + "+" + idEquipo1 + "+" + idEquipo2;
+        this.idRonda = idFase;
+        this.numRonda = nombreFase;  
         this.idRonda = idRonda;
         this.numRonda = numRonda;
         this.idEquipo1 = idEquipo1;
@@ -67,10 +71,10 @@ public class PartidoJugado {
 
     @Override
     public String toString() {
-        return "PartidoJugado{" + "idCombinadaEquipos=" + idCombinadaEquipos + ", idRonda=" + idRonda + ", numRonda=" + numRonda + ", id equipo1=" + idEquipo1 + ", id equipo2=" + idEquipo2 + ", golesEquipo1=" + golesEquipo1 + ", golesEquipo2=" + golesEquipo2 + ", resultadoEquipo1=" + resultadoEquipo1 + ", resultadoEquipo2=" + resultadoEquipo2 + '}';
+        return "PartidoJugado{" + "idCombinadaEquipos=" + idCombinadaEquipos + ", idRonda=" + idRonda + ", numRonda=" + numRonda + ", id equipo1=" + idEquipo1 + ", id equipo2=" + idEquipo2 + ", golesEquipo1=" + golesEquipo1 + ", golesEquipo2=" + golesEquipo2 + ", resultadoEquipo1=" + resultadoEquipo1 + ", resultadoEquipo2=" + resultadoEquipo2 + '}'; //pendiente agregar fase
     }
     
-    
+//-----------------------------------------------------------------------------    
     /**
      * @return the idCombinadaEquipos
      */
@@ -118,6 +122,20 @@ public class PartidoJugado {
      */
     public void setIdEquipo2(String idEquipo2) {
         this.idEquipo2 = idEquipo2;
+    }
+
+    /**
+     * @return the idFase
+     */
+    public String getIdFase() {
+        return idFase;
+    }
+
+    /**
+     * @param idFase the idFase to set
+     */
+    public void setIdFase(String idFase) {
+        this.idFase = idFase;
     }
 
     /**

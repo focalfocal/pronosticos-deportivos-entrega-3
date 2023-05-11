@@ -9,8 +9,9 @@ import java.util.ArrayList;
  * Java 11 (LTS)
  * Suposiciones / bases:
  * - Se supone que el orden en que se indican los dos equipos en un partido es el mismo tanto para los resultados de ese partido como para el pronóstico (condición local-visitante). 
- * - Los archivos de resultados y pronósticos incluyen varias rondas. También incluyen las columnas de fase (par etapa 3), pero no se utilizan aquí todavía.
- *
+ * - Los archivos de resultados y pronósticos incluyen varias rondas y una fase.
+ * - Para el cálculo de los puntos extra por ronda o fase acertadas, se supone que en el archivo pronostico.csv los pronosticos están ordenados (agrupados) por fase y por ronda.
+ *  - Por igual motivo se supone que las rondas y las fases tienen una cantidad fija de partidos, dadas en el archivo de configuracion.
  */
 public class PronosticosDeportivos3 {
     

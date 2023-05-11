@@ -9,13 +9,15 @@ import com.mycompany.pronosticosdeportivos3.PronosticosDeportivos3.ResultadoEnum
 public class UnPronostico {
     
     private String idCombinadaRondaEquipos; //Para identificar los partidos de forma unívoca para su correcto procesamiento
+    private String idFase;
     private String idRonda;
     private String idEquipo1;
     private String idEquipo2;
     private PronosticosDeportivos3.ResultadoEnum pronosticoEquipo1; //Los resultados del equipo 2 se deducen inmediatamente en base al pronostico para equipo1
     
-    UnPronostico (String idRonda, String idEquipo1, String idEquipo2, String gana, String empata, String pierde){
-        this.idCombinadaRondaEquipos = idRonda + "+" + idEquipo1 + "+" + idEquipo2;
+    UnPronostico (String idFase, String idRonda, String idEquipo1, String idEquipo2, String gana, String empata, String pierde){
+        this.idCombinadaRondaEquipos = idFase + "+" + idRonda + "+" + idEquipo1 + "+" + idEquipo2;
+        this.idFase = idFase;
         this.idRonda = idRonda;
         this.idEquipo1 = idEquipo1;
         this.idEquipo2 = idEquipo2;
@@ -28,6 +30,7 @@ public class UnPronostico {
         }
     }
 
+    //--------------------------------------------------------------------------
     /**
      * @return the idCombinadaRondaEquipos
      */
@@ -84,5 +87,33 @@ public class UnPronostico {
         this.pronosticoEquipo1 = pronosticoEquipo1;
     }
 
+    /**
+     * @return the idFase
+     */
+    public String getIdFase() {
+        return idFase;
+    }
 
+    /**
+     * @param idFase the idFase to set
+     */
+    public void setIdFase(String idFase) {
+        this.idFase = idFase;
+    }
+
+    /**
+     * @return the idRonda
+     */
+    public String getIdRonda() {
+        return idRonda;
+    }
+
+    /**
+     * @param idRonda the idRonda to set
+     */
+    public void setIdRonda(String idRonda) {
+        this.idRonda = idRonda;
+    }
+
+    
 }

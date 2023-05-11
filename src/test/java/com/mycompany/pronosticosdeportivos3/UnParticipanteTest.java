@@ -25,6 +25,10 @@ public class UnParticipanteTest {
     
     @Before
     public void setUp() {
+ 
+        String[] args = {"src/test/resources/configuracion.csv"};
+        Configuracion.leerConfiguracion( args[0] );
+        
         //usa construtor vacio, que tiene los atributos pero que no lee de archivo
         this.rondas = new Rondas();
         
@@ -35,7 +39,7 @@ public class UnParticipanteTest {
         equipos.add(equipo2);
         this.rondas.setEquipos(equipos);
         
-        PartidoJugado partidoJugado = new PartidoJugado("2", "2", "3", "4", 7, 0);
+        PartidoJugado partidoJugado = new PartidoJugado("1","Inicial","2", "2", "3", "4", 7, 0);
         ArrayList<PartidoJugado> partidos = new ArrayList();
         partidos.add(partidoJugado);
         this.rondas.setPartidos(partidos); 
@@ -56,7 +60,7 @@ public class UnParticipanteTest {
     public void testEvaluarPronosticosAciertaGanado() {
         
         // nuestro escenario
-        UnPronostico pronostico = new UnPronostico ("2", "3", "4", "X", "", "");
+        UnPronostico pronostico = new UnPronostico ("1", "2", "3", "4", "X", "", "");
         unParticipante.agregarPronostico (pronostico);
         
         // Procesar
@@ -71,7 +75,7 @@ public class UnParticipanteTest {
     public void testEvaluarPronosticosNoAciertaGanado() {
         
         // nuestro escenario
-        UnPronostico pronostico = new UnPronostico ("2", "3", "4", "", "X", "");
+        UnPronostico pronostico = new UnPronostico ("1","2", "3", "4", "", "X", "");
         unParticipante.agregarPronostico (pronostico);
         
         // Procesar
@@ -86,7 +90,7 @@ public class UnParticipanteTest {
     public void testEvaluarPronosticosNoAciertaEmpatado() {
         
         // nuestro escenario
-        UnPronostico pronostico = new UnPronostico ("2", "3", "4", "", "X", "");
+        UnPronostico pronostico = new UnPronostico ("1","2", "3", "4", "", "X", "");
         unParticipante.agregarPronostico (pronostico);
         
         // Procesar

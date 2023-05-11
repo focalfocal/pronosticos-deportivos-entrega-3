@@ -52,7 +52,8 @@ public class Participantes {
             
             participante = obtenerOcrearParticipante( idParticipante, nombreParticipante );
             
-            pronostico = new UnPronostico( i[4], i[6], i[10], i[7], i[8], i[9] );
+            //pronostico = new UnPronostico( i[4], i[6], i[10], i[7], i[8], i[9] );
+            pronostico = new UnPronostico( i[2], i[4], i[6], i[10], i[7], i[8], i[9] );
 
             //Se agrega el pronostico a los del participante
             participante.agregarPronostico( pronostico );
